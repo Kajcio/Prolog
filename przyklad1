@@ -1,0 +1,30 @@
+miasto(radom,polska,2000000,50,20,mazowieckie).
+miasto(warszawa,polska,12000000,40,30,mazowieckie).
+miasto(lublin,polska,1000000,20,10,lubelskie).
+%miasto(X,_,_,_,_,mazowieckie)
+tip(X,A,B):- miasto(X,_,_,A,B,_),
+    A>=10,
+    B=<20.
+
+polekola():-
+   write('Podaj Promień'),
+    read(X),
+    Y is pi*(X*X),
+    write(Y).
+
+listy():-
+    write('podaj pierwsza liste'),
+    read(A),
+    write('podaj druga liste'),
+    read(B),
+    write([A|B]).
+
+    
+    
+    
+   
+  
+    
+    
+    
+    
